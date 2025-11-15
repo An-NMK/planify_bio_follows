@@ -4,6 +4,7 @@ import com.planify.backend.model.Follow;
 import com.planify.backend.model.User;
 import com.planify.backend.repository.FollowRepository;
 import com.planify.backend.repository.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import jakarta.persistence.EntityNotFoundException;
@@ -15,6 +16,7 @@ public class FollowService {
     private final FollowRepository followRepository;
     private final UserRepository userRepository;
 
+    @Autowired
     public FollowService(FollowRepository followRepository, UserRepository userRepository) {
         this.followRepository = followRepository;
         this.userRepository = userRepository;
